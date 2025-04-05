@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, calibri;
+    text-align: center;
+    margin: 20px;
+    padding: 0;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+}
+
+/* Header */
+header {
+    background: #007BFF;
+    padding: 5px;
+  margin: 5px;
+    font-size: 15px;
+}
+
+/* Smooth Page Transitions */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Navigation */
+nav a {
+  padding: 5px;
+  gap:5px;
+    margin: 20px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+nav {
+    padding: 5px;
+    gap: 5px;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Toggle Buttons */
+.toggle-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#darkModeToggle, .toggle-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#darkModeToggle:hover, .toggle-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Login Page */
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background: white;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+input, button {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+}
+/* Dashboard */
+.dashboard {
+    width: 250px;
+    padding: 15px;
+    background: white;
+    position : fixed;
+    left: -270px;
+    top: 60px;
+    transition: left 0.3s ease-in-out;
+    border-radius: 10px;
+    color: black;
+}
+
+.dashboard.show {
+    left: 5px;
+}
+
+
+/* Courses */
+.course-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.course-card {
+    background: white;
+    color: black;
+    padding: 15px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.course-card:hover {
+    transform: translateY(-5px);
+}
+/* Dark Mode */
+.dark-mode {
+    background: black;
+    color: white;
+}
+
+.dark-mode .login-container, 
+.dark-mode .dashboard, 
+.dark-mode .course-card {
+    background: #333;
+    color: white;
+}
+
+.dark-mode #darkModeToggle {
+    background: black;
+    color: white;
+}
